@@ -1,0 +1,9 @@
+flask
+neo4j
+PyMuPDF
+spacy
+google-generativeai
+pydantic
+dotenv
+google
+werkzeug
