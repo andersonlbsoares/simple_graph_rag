@@ -1,5 +1,5 @@
 # Usar uma imagem base do Python
-FROM python:3.10
+FROM python:3.10-slim
 
 # Definir o diretório de trabalho
 WORKDIR /app
@@ -7,13 +7,7 @@ WORKDIR /app
 # Instalar dependências do sistema necessárias para a construção de pacotes Python
 RUN apt-get update && \
     apt-get install -y \
-    build-essential \
-    libhdf5-dev \
-    python3-dev \
-    gfortran \
-    libblas-dev \
-    liblapack-dev \
-    && rm -rf /var/lib/apt/lists/*
+    build-essential
 
 # Copiar o arquivo requirements.txt para o diretório de trabalho
 COPY requirements.txt .

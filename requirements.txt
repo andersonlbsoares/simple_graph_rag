@@ -5,5 +5,5 @@ spacy
 google-generativeai
 pydantic
 dotenv
-google
+google-genai
 werkzeug
