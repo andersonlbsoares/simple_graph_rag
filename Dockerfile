@@ -19,6 +19,7 @@ RUN apt-get update && \
 COPY requirements.txt .
 # Instalar as dependências restantes
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir google-generativeai
 RUN python -m spacy download pt_core_news_sm
 
 # Copiar o restante dos arquivos para o contêiner
