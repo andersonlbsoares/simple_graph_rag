@@ -9,6 +9,8 @@ NEO4J_URI = os.getenv("NEO4J_URI")
 NEO4J_USER = os.getenv("NEO4J_USER")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 
+print(f"Conectando ao Neo4j em {NEO4J_URI} com usuário {NEO4J_USER}")
+
 def inserir_relacoes_neo4j(relacoes):
     driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
 
