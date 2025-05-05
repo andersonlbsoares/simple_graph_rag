@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
+from flask_cors import CORS
 import tempfile
 import os
 
@@ -8,6 +9,7 @@ from core.neo4j_utils import inserir_relacoes_neo4j, buscar_contexto_neo4j
 from core.llm import call_llm
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/upload_pdf", methods=["POST"])
 def upload_pdf():

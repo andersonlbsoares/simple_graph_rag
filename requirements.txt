@@ -7,3 +7,4 @@ pydantic
 dotenv
 google-genai
 werkzeug
+flask_cors
